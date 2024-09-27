@@ -1,0 +1,52 @@
+<header>
+    <h1>CarDrive</h1>
+    <h5>Registre as ocorrências</h5>
+</header>
+
+<form>
+    <img src="../assets/client.png" alt="cliente">
+
+    <input type="text"      placeholder="Nome"                      class="form-control" name="name" [(ngModel)]="client.name">
+
+    <input type="text"      placeholder="Veículo"                   class="form-control" name="carModel" [(ngModel)]="client.carModel">
+
+    <input type="number"    placeholder="Ano"                       class="form-control" name="year" [(ngModel)]="client.year">
+
+    <input type="text"      placeholder="Descrição da falha"        class="form-control" name="description" [(ngModel)]="client.description">
+
+    <input type="button" value="Cadastrar"  *ngIf="btnCadastro"     class="btn btn-primary"     (click)="create()">
+
+    <input type="button" value="Alterar"    *ngIf="!btnCadastro"     class="btn btn-warning" (click)="update()">
+
+    <input type="button" value="Remover"    *ngIf="!btnCadastro"     class="btn btn-danger" (click)="delete()">
+
+    <input type="button" value="Cancelar"   *ngIf="!btnCadastro"     class="btn btn-secondery" (click)="cancelar()">
+</form>
+
+<table class="table" *ngIf="tabela">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Veículo</th>
+            <th>Ano</th>
+            <th>Descrição da Falha</th>
+            <th>Selecionar</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let c of cliente; index as i">
+            <td>{{i+1}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.carModel}}</td>
+            <td>{{c.year}}</td>
+            <td>{{c.description}}</td>
+            <td><button class="btn btn-success" (click)="selectClient(i)">Selecionar</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<footer>
+    <p>Developed by AnjosTech Solutions &copy;</p>
+</footer>

@@ -1,0 +1,49 @@
+header{
+    height: 125px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+
+}
+
+header > h1 {
+    padding: 10px;
+    text-align: center;
+}
+
+header > h5 {
+    padding: 10px;
+    text-align: center;
+}
+
+img{
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+form{
+    width: 500px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+input {
+    margin-bottom: 30px;
+}
+
+input[type="button"]{
+    margin-right: 10px;
+}
+
+footer{
+    height: 50px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+
+}
+
+footer > p {
+    padding: 10px;
+    text-align: center;
+}
